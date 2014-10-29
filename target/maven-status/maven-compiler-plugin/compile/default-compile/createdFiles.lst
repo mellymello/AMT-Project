@@ -1,0 +1,5 @@
+ch\heigvd\amt\lab4\model\Sensor.class
+ch\heigvd\amt\lab4\services\SensorJdbcDAO.class
+ch\heigvd\amt\lab4\services\SensorDAOLocal.class
+ch\heigvd\amt\lab4\controllers\SensorServlet.class
+ch\heigvd\amt\lab4\model\Sensor$Type.class
