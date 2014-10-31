@@ -1,0 +1,5 @@
+#Docker part
+	config.vm.provision "docker" do |d|
+		d.build_image "/vagrant/Docker/Jenkins", args: "-t heigvd/jenkins"
+		d.run "jenkins-dock", image: "heigvd/jenkins", args: "-p 9090:8080 -v /vagrant/Docker/Jenkins"
+	end
