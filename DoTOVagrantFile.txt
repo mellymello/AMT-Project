@@ -1,3 +1,5 @@
+
+
 #Docker part
 	config.vm.provision "docker" do |d|
 		d.build_image "/vagrant/Docker/Jenkins", args: "-t heigvd/jenkins"

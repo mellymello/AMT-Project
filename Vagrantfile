@@ -5,6 +5,17 @@
 VAGRANTFILE_API_VERSION = "2"
 
 Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
+
+
+
+
+#Docker part
+	config.vm.provision "docker" do |d|
+		d.build_image "/vagrant/Docker/Jenkins", args: "-t heigvd/jenkins"
+		d.run "jenkins-dock", image: "heigvd/jenkins", args: "-p 9090:8080 -v /vagrant/Docker/Jenkins"
+	end
+
+
   # All Vagrant configuration is done here. The most common configuration
   # options are documented and commented below. For a complete reference,
   # please see the online documentation at vagrantup.com.
@@ -119,4 +130,7 @@ Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
   # chef-validator, unless you changed the configuration.
   #
   #   chef.validation_client_name = "ORGNAME-validator"
+  
+  
+  
 end
